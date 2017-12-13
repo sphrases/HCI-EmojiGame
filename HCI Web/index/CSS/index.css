@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #faebd7;
+}
+
+#phoneFrame {
+    width: 333px;
+    height: 600px;
+    border: 0px solid;
+    scrolling: false;
+}
+
+.phoneDiv {
+    width: 333px;
+    display: block;
+    margin: 30px auto;
+
+}
