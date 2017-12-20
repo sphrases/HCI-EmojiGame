@@ -8,15 +8,21 @@ body {
 }
 
 #phoneFrame {
-    width: 333px;
-    height: 600px;
+    width: 100px;
+    height: 100px;
     border: 0px solid;
     scrolling: false;
 }
 
 .phoneDiv {
-    width: 333px;
+    width: 0px;
     display: block;
-    margin: 30px auto;
+}
 
+video {
+    filter: hue-rotate(180deg) saturate(1000%);
+    -moz-filter: hue-rotate(180deg) saturate(1000%);
+    -webkit-filter: hue-rotate(180deg) saturate(5000%);
+    videoHeight: 100;
+    videoWidth: 100;
 }
