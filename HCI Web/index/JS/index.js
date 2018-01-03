@@ -1,24 +1,26 @@
 function onLoadFunction() {
-    navigator.getUserMedia = navigator.getUserMedia;
-    var constraints = {
-        audio: false,
-        video: true
-    };
+    closeNav();
+}
 
-    var video = document.querySelector('video');
-
-    function successCallback(stream) {
-        window.stream = stream; // stream available to console
-        if (window.URL) {
-            video.src = window.URL.createObjectURL(stream);
-        } else {
-            video.src = stream;
-        }
+function toggleNav() {
+    if($('#navBar').css('opacity') == 1) {
+        closeNav();
+    } else {
+        openNav();
     }
+}
 
-    function errorCallback(error) {
-        console.log('navigator.getUserMedia error: ', error);
-    }
+function openNav() {
+    $('#navBar-toggle').css('left', '-1vw');
+    $('#navBar-hideBar').fadeTo(300, 0.3);
+    $('#navBar').css('left','0vw')
+        .fadeTo('fast',100);
 
-    navigator.getUserMedia(constraints, successCallback, errorCallback);
+}
+
+function closeNav() {
+    $('#navBar-toggle').css('left', '-3vw');
+    $('#navBar-hideBar').fadeOut(200);
+    $('#navBar').css('left','-60vw')
+        .fadeTo('fast',0);
 }

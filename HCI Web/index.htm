@@ -1,27 +1,33 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>DesktopLayout</title>
     <!-- Scripts -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="index/JS/lib/adapter.js"></script>
     <script src="./index/JS/index.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./index/CSS/index.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 
 </head>
 <body onload="onLoadFunction()">
 
-
 <div class="phoneDiv">
-    <video autoplay></video>
-
-
-
-
+    <video autoplay class="phoneDiv-phone"></video>
 </div>
+
+<button class="navBar-toggle" id="navBar-toggle" onclick="toggleNav()">&#9776;</button>
+<div class="navBar" id="navBar">
+
+    <h1 class="navBar-post navBar-title">Emojify</h1>
+    <button class="navBar-post navBar-button">New Game</button>
+    <button class="navBar-post navBar-button">Profile</button>
+    <button class="navBar-post navBar-button">Setting</button>
+    <button class="navBar-post navBar-button">Dixhuxen</button>
+</div>
+<div class="navBar-hideBar" id="navBar-hideBar"></div>
 
 </body>
 </html>
