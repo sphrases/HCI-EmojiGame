@@ -25,7 +25,7 @@ video {
 /* Phone Div */
 .phoneDiv {
     width: 100%;
-    height: 90%;
+    height: 89%;
     display: block;
     margin: 0px auto;
 }
@@ -34,7 +34,7 @@ video {
 /* actionBar */
 .actionBar {
     width: 100%;
-    height:10%;
+    height: 19vw;
     box-sizing: border-box;
     border: 1px solid #fa2123;
     display: flex;
@@ -49,7 +49,24 @@ video {
     border: 1px solid #fa2123;
     width: 30vw;
     height: 30vw;
-    top: -10px
+    bottom: 0px;
+}
+
+.actionBar-button-image-right {
+    border: 1px solid #fa2123;
+    width: 18vw;
+    height: 18vw;
+    bottom: 0px;
+}
+
+/* emojiBar*/
+.emojiBar-button-image {
+    display: block;
+    position: fixed;
+    bottom: -8vw;
+    left: 28vw;
+    width: 40vw;
+    height: 40vw;
 }
 
 /* navBarToggle */
