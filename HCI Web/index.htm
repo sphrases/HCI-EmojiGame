@@ -1,3 +1,5 @@
+
+<!DOCTYPE html>
 <html>
 <link rel="manifest" href="manifest.json">
 <head>
@@ -6,30 +8,50 @@
     <title>DesktopLayout</title>
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="index/JS/lib/adapter.js"></script>
+
     <script src="./index/JS/index.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="./index/CSS/index.css">
+
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 
 </head>
 <body onload="onLoadFunction()">
 
+
+<div id="overlay" onclick="hideEmojiSelector()">
+    <h1>Select an Emoji</h1>
+
+    <img src="index/RES/grimasse.png" onclick="setEmoji('Grimasse')"/>
+    <img src="index/RES/grinning.png" onclick="setEmoji('Grinning')"/>
+    <img src="index/RES/nerd.png" onclick="setEmoji('Nerd')"/>
+    <img src="index/RES/shy.png" onclick="setEmoji('Shy')"/>
+    <img src="index/RES/sunglasses.png" onclick="setEmoji('Sunglasses')"/>
+    <img src="index/RES/zunge.png" onclick="setEmoji('Zunge')"/>
+</div>
+
+
 <div class="phoneDiv">
-    <video autoplay class="phoneDiv-phone"></video>
+    <div id="container">
+        <video autoplay="true" id="videoElement" controls>
+            <source>
+        </video>
+    </div>
 </div>
 
 <div class="actionBar">
-    <button class="actionBar-button actionBar-button-left">left</button>
+    <div class="actionBar-button actionBar-button-left">00:00:00</div>
     <div class="actionBar-button actionBar-button-right">
-        <img class="actionBar-button-image-right" src="index/RES/buttons/selectemoji.png"/>
+        <img class="actionBar-button-image-right" src="index/RES/buttons/selectemoji.png"
+             onclick="showEmojiSelector()"/>
     </div>
 </div>
 
 
 <div class="">
-    <img class="emojiBar-button-image" src="index/RES/grimasse.png"/>
+    <img class="emojiBar-button-image" id="emojiPic" src="index/RES/grimasse.png"/>
 </div>
 
 
@@ -41,8 +63,8 @@
     <button class="navBar-post navBar-button">Setting</button>
     <button class="navBar-post navBar-button">Dixhuxen</button>
 </div>
-<div class="navBar-hideBar" id="navBar-hideBar"></div>
+<div class="navBar-hideBar" id="navBar-hideBar" onclick="toggleNav()"></div>
 
-
+<script src="./index/JS/video.js"></script>
 </body>
 </html>
