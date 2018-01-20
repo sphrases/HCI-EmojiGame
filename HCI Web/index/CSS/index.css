@@ -42,8 +42,14 @@ video {
 }
 
 .actionBar-button{
-    padding: 5vw;
 
+}
+
+.actionBar-button-image {
+    border: 1px solid #fa2123;
+    width: 30vw;
+    height: 30vw;
+    top: -10px
 }
 
 /* navBarToggle */
