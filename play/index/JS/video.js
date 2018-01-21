@@ -35,7 +35,7 @@ function connectPartner() {
     setTimeout(function () {
         $(".containerVideo-connectText").animate({opacity: 0});
         $("#overlayVideo").animate({opacity: 1});
-        document.getElementById("overlayVideo").play();
+        //document.getElementById("overlayVideo").play();
     }, 3000);
 
 }
@@ -43,7 +43,7 @@ function connectPartner() {
 function disconnectPartner() {
     $(".containerVideo-connectText").animate({opacity: 0});
     $("#overlayVideo").animate({opacity: 0});
-    document.getElementById("overlayVideo").pause();
+    //document.getElementById("overlayVideo").pause();
 
 }
 
@@ -76,6 +76,4 @@ function selectPartner(partner) {
             startGame();
             break;
     }
-
-
 }
