@@ -1,18 +1,15 @@
-(function () {
-    navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia);
+var video = document.querySelector("#videoElement");
 
-    navigator.getUserMedia(
-        // constraints
-        {video:true, audio:false},
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
 
-        // success callback
-        function (mediaStream) {
-            var video = $("#videoElement");
-            video.srcObject = mediaStream;
+if (navigator.getUserMedia) {
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
 
-        },
-        //handle error
-        function (error) {
-            console.log(error);
-        })
-})();
+function handleVideo(stream) {
+    video.srcObject = stream;
+}
+
+function videoError(e) {
+    console.log(e);
+}

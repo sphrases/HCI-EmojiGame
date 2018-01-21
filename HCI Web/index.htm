@@ -1,21 +1,19 @@
-
 <!DOCTYPE html>
 <html>
+<!-- Google Chrome Web App Manifest-->
 <link rel="manifest" href="manifest.json">
 <head>
-
+    <!-- Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>DesktopLayout</title>
+
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
     <script src="./index/JS/index.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./index/CSS/index.css">
-
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
 
 </head>
 <body onload="onLoadFunction()">
@@ -23,7 +21,6 @@
 
 <div id="overlay" onclick="hideEmojiSelector()">
     <h1>Select an Emoji</h1>
-
     <img src="index/RES/grimasse.png" onclick="setEmoji('Grimasse')"/>
     <img src="index/RES/grinning.png" onclick="setEmoji('Grinning')"/>
     <img src="index/RES/nerd.png" onclick="setEmoji('Nerd')"/>
@@ -33,14 +30,13 @@
 </div>
 
 
-<div class="phoneDiv">
-    <div id="container">
-        <video autoplay="true" id="videoElement" controls>
-            <source>
-        </video>
-    </div>
+<div id="container">
+    <video autoplay="true" id="videoElement">
+    </video>
 </div>
+<div class="videoSpacer"></div>
 
+<!-- Action Bar: With Emoji, and Selector -->
 <div class="actionBar">
     <div class="actionBar-button actionBar-button-left">00:00:00</div>
     <div class="actionBar-button actionBar-button-right">
@@ -48,13 +44,11 @@
              onclick="showEmojiSelector()"/>
     </div>
 </div>
-
-
 <div class="">
     <img class="emojiBar-button-image" id="emojiPic" src="index/RES/grimasse.png"/>
 </div>
 
-
+<!-- Nav Bar: Side Menu -->
 <button class="navBar-toggle" id="navBar-toggle" onclick="toggleNav()">&#9776;</button>
 <div class="navBar" id="navBar">
     <h1 class="navBar-post navBar-title">Emojify</h1>
@@ -64,6 +58,8 @@
     <button class="navBar-post navBar-button">Dixhuxen</button>
 </div>
 <div class="navBar-hideBar" id="navBar-hideBar" onclick="toggleNav()"></div>
+
+
 
 <script src="./index/JS/video.js"></script>
 </body>
