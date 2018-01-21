@@ -10,8 +10,8 @@
 body {
     background-color: #faebd7;
     font-family: 'Lato', sans-serif;
+    overflow: hidden;
 }
-
 
 /* Phone Div */
 .phoneDiv {
@@ -23,12 +23,13 @@ body {
 
 /* actionBar */
 .actionBar {
+    position: absolute;
     width: 100%;
-    height: 19vw;
+    height: 30vw;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    background-color: rgba(0, 5, 255, 0.5);
 }
 
 .actionBar-button-image {
@@ -54,7 +55,6 @@ body {
     height: 40vw;
 }
 
-
 /* navBarToggle */
 .navBar-toggle {
     z-index: 100;
@@ -69,7 +69,6 @@ body {
     font-size: 10vw;
     transition: 0.5s;
 }
-
 
 /* navBar */
 .navBar {
@@ -132,7 +131,6 @@ body {
     opacity: 0.3;
 }
 
-
 /* Overlay */
 #overlay {
     position: fixed; /* Sit on top of the page content */
@@ -153,27 +151,29 @@ body {
     width: 30vw;
 }
 
-
 /* Video */
 #container {
-    margin: 0px auto;
+
 }
 
 #videoElement {
+    margin: 0;
+    padding: 0;
     z-index: -1;
     position: fixed;
     display: block;
     top: 0;
-    left: -55%;
-    width: 210%;
-    height: auto;
+    height: 100%;
+    width: auto;
+    left: 0;
+    margin-left: 0;
 
 }
-
 
 /* Video Spacer */
 .videoSpacer {
     display: block;
     top: 0;
     height: 88vh;
+
 }
