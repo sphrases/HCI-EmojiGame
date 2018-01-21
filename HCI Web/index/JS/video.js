@@ -13,3 +13,11 @@ function handleVideo(stream) {
 function videoError(e) {
     console.log(e);
 }
+
+
+
+
+//PartnerVideo
+setTimeout(function(){
+    $("#overlayVideo").css("display","block");
+}, 5000);
