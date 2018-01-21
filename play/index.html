@@ -19,7 +19,7 @@
 <body onload="onLoadFunction()">
 
 
-<div id="overlay" onclick="hideEmojiSelector()">
+<div class="overlay overlayEmoji" onclick="hideEmojiSelector()">
     <h1>Select an Emoji</h1>
     <img src="index/RES/grimasse.png" onclick="setEmoji('Grimasse')"/>
     <img src="index/RES/grinning.png" onclick="setEmoji('Grinning')"/>
@@ -29,11 +29,23 @@
     <img src="index/RES/zunge.png" onclick="setEmoji('Zunge')"/>
 </div>
 
-<div id="containerVideo">
-    <video autoplay="true" id="overlayVideo" src="index/RES/partnerVideo.mp4" type="video/mp4" muted loop></video>
+<div class="overlay overlayPlayer" onclick="hidePlayerSelector()">
+    <p>Select Partner:</p>
+    <img src="index/RES/chrisPicture.png" onclick="selectPartner('chris')"/>
+    <img src="index/RES/maurinPicture.png" onclick="selectPartner('maurin')"/>
+    <img src="index/RES/shy.png" onclick=""/>
+    <img src="index/RES/sunglasses.png" onclick=""/>
+    <img src="index/RES/zunge.png" onclick=""/>
+
+
 </div>
 
+<div id="containerVideo">
+    <p class="containerVideo-connectText">partner connecting...</p>
+    <video autoplay="true" id="overlayVideo" src="index/RES/chrisVideo.mp4" type="video/mp4" muted loop></video>
+</div>
 
+<!-- Webcam Video Container -->
 <div id="container">
     <video autoplay="true" id="videoElement">
     </video>
@@ -60,7 +72,7 @@
 <button class="navBar-toggle" id="navBar-toggle" onclick="toggleNav()">&#9776;</button>
 <div class="navBar" id="navBar">
     <h1 class="navBar-post navBar-title">Emojify</h1>
-    <button class="navBar-post navBar-button">New Game</button>
+    <button class="navBar-post navBar-button" onclick="showPlayerSelector();toggleNav();disconnectPartner()">New Game</button>
     <button class="navBar-post navBar-button">Profile</button>
     <button class="navBar-post navBar-button">Setting</button>
     <button class="navBar-post navBar-button">Dixhuxen</button>
@@ -71,6 +83,7 @@
 <script src="./index/JS/video.js"></script>
 <script>
     scaleVideo();
+    //connectPartner();
 </script>
 </body>
 </html>

@@ -23,11 +23,12 @@ body {
 
 /* actionBar */
 .actionBar {
+    opacity: 0;
+    display: flex;
     position: absolute;
     width: 100%;
     height: 30vw;
     box-sizing: border-box;
-    display: flex;
     justify-content: space-between;
     background-color: rgba(130, 134, 137, 0.55);
 }
@@ -35,7 +36,7 @@ body {
 .actionBar-timer {
     font-weight: bold;
     font-family: 'Lato', sans-serif;
-    color: #ffbf17;
+    color: #5fbd28;
     text-shadow: 1px 1px 7px rgba(0,0,0,0.5);
     font-size: 2em;
     margin-left: 5vw;
@@ -149,7 +150,7 @@ body {
 }
 
 /* Overlay */
-#overlay {
+.overlay {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -163,7 +164,7 @@ body {
     cursor: pointer; /* Add a pointer on hover */
 }
 
-#overlay img {
+.overlay img {
     height: 30vw;
     width: 30vw;
 }
@@ -205,14 +206,27 @@ body {
 }
 
 #overlayVideo {
-    display: none;
+    opacity: 0;
+    display: block;
     width: 60%;
     height: auto;
-    margin-top: 10%;
+    margin-top: -28%;
     margin-left : 27%;
     margin-bottom: 20%;
     border: 2px solid #ffbf17;
     border-radius: 50%;
     -webkit-filter: drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
     drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
+}
+
+.containerVideo-connectText {
+    opacity: 0;
+    margin-top: 10%;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    color: #ffbf17;
+    text-shadow: 1px 1px 7px rgba(0,0,0,0.5);
+    font-size: 1.3em;
+    margin-left: 20%;
+
 }

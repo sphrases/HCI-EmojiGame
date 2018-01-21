@@ -1,8 +1,9 @@
 var start;
 var timerInterval;
+var winningDelayTimer;
 
 function onLoadFunction() {
-    closeNav();
+    //closeNav();
 }
 
 function toggleNav() {
@@ -70,29 +71,55 @@ function setEmoji(emoji) {
             $("#emojiPic").attr("src","index/RES/green/zunge_green.png");
             break;
     }
+    startTimer();
 
 }
 
 function showEmojiSelector() {
-    $("#overlay").css("display", "block");
+    $(".overlayEmoji").css("display", "block");
 }
 
 
 function hideEmojiSelector() {
-    $("#overlay").css("display", "none");
+    $(".overlayEmoji").css("display", "none");
+}
+
+function showPlayerSelector() {
+    $(".overlayPlayer").css("display", "block");
+}
+
+function hidePlayerSelector() {
+    $(".overlayPlayer").css("display", "none");
 }
 
 function startTimer() {
     start = new Date;
-
+    $(".actionBar-timer").css("color", "#ff2d1f");
     timerInterval = setInterval(function() {
         $('.Timer').text(Math.floor((new Date - start) / 1000));
     }, 1000);
+
+    var winningDelay = (Math.floor(Math.random() * 13) + 5)*1000;
+    console.log(winningDelay/1000-1);
+    winningDelayTimer = setTimeout(function () {
+        stopTimer();
+    }, winningDelay);
 }
 
 function stopTimer() {
+    $(".actionBar-timer").css("color", "#5FBD28");
+    clearTimeout(winningDelayTimer);
     clearInterval(timerInterval);
     $('.Timer').text("0");
 }
 
 
+function startGame() {
+    $(".actionBar").animate({ opacity: 1 });
+
+    connectPartner();
+
+
+
+
+}
