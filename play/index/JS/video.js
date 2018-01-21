@@ -35,7 +35,7 @@ function connectPartner() {
     setTimeout(function () {
         $(".containerVideo-connectText").animate({opacity: 0});
         $("#overlayVideo").animate({opacity: 1});
-        $("#overlayVideo").get(0).play();
+        document.getElementById("overlayVideo").play();
     }, 3000);
 
 }
@@ -43,7 +43,7 @@ function connectPartner() {
 function disconnectPartner() {
     $(".containerVideo-connectText").animate({opacity: 0});
     $("#overlayVideo").animate({opacity: 0});
-    $("#overlayVideo").get(0).pause();
+    document.getElementById("overlayVideo").pause();
 
 }
 
