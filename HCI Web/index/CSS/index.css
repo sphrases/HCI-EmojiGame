@@ -199,13 +199,9 @@ body {
 /* Chat Video */
 #containerVideo {
     width: 50%;
-    max-height: 200px;
     overflow: hidden;
     position: fixed;
     right: 0px;
-
-
-
 }
 
 #overlayVideo {
@@ -218,6 +214,5 @@ body {
     border: 2px solid #ffbf17;
     border-radius: 50%;
     -webkit-filter: drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
-drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
-
+    drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
 }
