@@ -42,11 +42,10 @@ function connectPartner() {
     setTimeout(function () {
         $(".containerVideo-connectText").animate({opacity: 0});
         $("#overlayVideo").animate({opacity: 1});
-    }, 5000);
+    }, 3000);
 }
 
 function disconnectPartner() {
-    $(".containerVideo-connectText").animate({opacity: 0});
     $(".containerVideo-connectText").animate({opacity: 0});
     $("#overlayVideo").animate({opacity: 0});
 
@@ -62,13 +61,21 @@ function selectPartner(partner) {
             $("#overlayVideo").attr("src", "index/RES/maurinVideo.mp4");
             startGame();
             break;
+        case "mathis":
+            $("#overlayVideo").attr("src", "index/RES/mathisVideo.mp4");
+            startGame();
+            break;
+        case "jesse":
+            $("#overlayVideo").attr("src", "index/RES/jesseVideo.mp4");
+            startGame();
+            break;
         case "ahmet":
             $("#overlayVideo").attr("src", "index/RES/ahmetVideo.mp4");
-
+            startGame();
             break;
-        case "darian":
-            $("#overlayVideo").attr("src", "index/RES/darianVideo.mp4");
-
+        case "aiko":
+            $("#overlayVideo").attr("src", "index/RES/aikoVideo.mp4");
+            startGame();
             break;
     }
 

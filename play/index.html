@@ -21,28 +21,26 @@
 
 <div class="overlay overlayEmoji" onclick="hideEmojiSelector()">
     <h1>Select an Emoji</h1>
-    <img src="index/RES/grimasse.png" onclick="setEmoji('Grimasse')"/>
-    <img src="index/RES/grinning.png" onclick="setEmoji('Grinning')"/>
-    <img src="index/RES/nerd.png" onclick="setEmoji('Nerd')"/>
-    <img src="index/RES/shy.png" onclick="setEmoji('Shy')"/>
-    <img src="index/RES/sunglasses.png" onclick="setEmoji('Sunglasses')"/>
-    <img src="index/RES/zunge.png" onclick="setEmoji('Zunge')"/>
+    <img src="index/RES/grimasse.png" onclick="setEmoji('Grimasse');startTimer();"/>
+    <img src="index/RES/grinning.png" onclick="setEmoji('Grinning');startTimer();"/>
+    <img src="index/RES/nerd.png" onclick="setEmoji('Nerd');startTimer();"/>
+    <img src="index/RES/shy.png" onclick="setEmoji('Shy');startTimer();"/>
+    <img src="index/RES/sunglasses.png" onclick="setEmoji('Sunglasses');startTimer();"/>
+    <img src="index/RES/zunge.png" onclick="setEmoji('Zunge');startTimer();"/>
 </div>
 
 <div class="overlay overlayPlayer" onclick="hidePlayerSelector()">
     <p>Select Partner:</p>
-    <img src="index/RES/chrisPicture.png" onclick="selectPartner('chris')"/>
-    <img src="index/RES/maurinPicture.png" onclick="selectPartner('maurin')"/>
-    <img src="index/RES/shy.png" onclick=""/>
-    <img src="index/RES/sunglasses.png" onclick=""/>
-    <img src="index/RES/zunge.png" onclick=""/>
-
-
+    <img src="index/RES/chrisPicture.png" onclick="selectPartner('chris');"/>
+    <img src="index/RES/maurinPicture.png" onclick="selectPartner('maurin');"/>
+    <img src="index/RES/mathisPicture.png" onclick="selectPartner('mathis');"/>
+    <img src="index/RES/jessePicture.png" onclick="selectPartner('jesse');"/>
+    <img src="index/RES/aikoPicture.png" onclick="selectPartner('aiko');"/>
 </div>
 
 <div id="containerVideo">
     <p class="containerVideo-connectText">partner connecting...</p>
-    <video autoplay="true" id="overlayVideo" src="index/RES/chrisVideo.mp4" type="video/mp4" muted loop></video>
+    <video autoplay="true" id="overlayVideo" src="index/RES/chrisVideo.mp4" type="video/mp4" loop></video>
 </div>
 
 <!-- Webcam Video Container -->
@@ -72,7 +70,8 @@
 <button class="navBar-toggle" id="navBar-toggle" onclick="toggleNav()">&#9776;</button>
 <div class="navBar" id="navBar">
     <h1 class="navBar-post navBar-title">Emojify</h1>
-    <button class="navBar-post navBar-button" onclick="showPlayerSelector();toggleNav();disconnectPartner()">New Game</button>
+    <button class="navBar-post navBar-button" onclick="showPlayerSelector();toggleNav();disconnectPartner()">New Game
+    </button>
     <button class="navBar-post navBar-button">Profile</button>
     <button class="navBar-post navBar-button">Setting</button>
     <button class="navBar-post navBar-button">Dixhuxen</button>
