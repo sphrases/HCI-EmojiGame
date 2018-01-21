@@ -1,3 +1,6 @@
+var start;
+var timerInterval;
+
 function onLoadFunction() {
     closeNav();
 }
@@ -80,33 +83,16 @@ function hideEmojiSelector() {
 }
 
 function startTimer() {
+    start = new Date;
 
+    timerInterval = setInterval(function() {
+        $('.Timer').text(Math.floor((new Date - start) / 1000));
+    }, 1000);
 }
 
-function scaleVideo() {
-    var viewportWidth = $(window).width();
-    var videoWidth = $("#videoElement").width();
-
-    var moveLeft = pos_to_neg(videoWidth/2)+viewportWidth;
-
-    console.log("video Breite " + videoWidth);
-    console.log("video Hälfte " + videoWidth/2);
-    console.log("VP Breite " + viewportWidth);
-    console.log("VP hälfte " + viewportWidth/2);
-    console.log(" ");
-    console.log("nach rechts um " + viewportWidth/2);
-    console.log("nach links um " + moveLeft);
-
-
-
-
-
-    $("#videoElement").css("left", viewportWidth/2)
-        .css("margin-left", moveLeft);
+function stopTimer() {
+    clearInterval(timerInterval);
+    $('.Timer').text("0");
 }
 
 
-function pos_to_neg(num)
-{
-    return -Math.abs(num);
-}
