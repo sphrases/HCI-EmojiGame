@@ -21,13 +21,6 @@ function scaleVideo() {
 
     var moveLeft = pos_to_neg(videoWidth / 2) + viewportWidth;
 
-    console.log("video Breite " + videoWidth);
-    console.log("video Hälfte " + videoWidth / 2);
-    console.log("VP Breite " + viewportWidth);
-    console.log("VP hälfte " + viewportWidth / 2);
-    console.log(" ");
-    console.log("nach rechts um " + viewportWidth / 2);
-    console.log("nach links um " + moveLeft);
     $("#videoElement").css("left", viewportWidth / 2)
         .css("margin-left", moveLeft);
 }
@@ -42,16 +35,21 @@ function connectPartner() {
     setTimeout(function () {
         $(".containerVideo-connectText").animate({opacity: 0});
         $("#overlayVideo").animate({opacity: 1});
+        $("#overlayVideo").get(0).play();
     }, 3000);
+
 }
 
 function disconnectPartner() {
     $(".containerVideo-connectText").animate({opacity: 0});
     $("#overlayVideo").animate({opacity: 0});
+    $("#overlayVideo").get(0).pause();
 
 }
 
 function selectPartner(partner) {
+    stopTimer();
+
     switch (partner) {
         case "chris":
             $("#overlayVideo").attr("src", "index/RES/chrisVideo.mp4");

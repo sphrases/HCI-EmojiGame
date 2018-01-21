@@ -139,8 +139,5 @@ function startGame() {
     $(".actionBar").css("display", "flex")
         .animate({opacity: 1});
     stopTimer();
-
     connectPartner();
-
-
 }
