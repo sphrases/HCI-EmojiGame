@@ -18,11 +18,19 @@ function videoError(e) {
 function scaleVideo() {
     var viewportWidth = $(window).width();
     var videoWidth = $("#videoElement").width();
+    var difference = (viewportWidth - videoWidth)/4;
+    console.log(viewportWidth);
+    console.log(videoWidth);
 
-    var moveLeft = pos_to_neg(videoWidth / 2) + viewportWidth;
+    console.log(difference);
+    if(difference >= 0) {
+        difference = 0;
+    }
 
-    $("#videoElement").css("left", viewportWidth / 2)
-        .css("margin-left", moveLeft);
+
+
+    $("#videoElement").css("left", "0")
+        .css("margin-left", difference);
 }
 
 
