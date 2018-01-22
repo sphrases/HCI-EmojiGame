@@ -56,41 +56,35 @@ function disconnectPartner() {
 
 function selectPartner(partner) {
     stopTimer();
-
     switch (partner) {
         case "chris":
-            $("#overlayVideoSRC").empty();
             $("#overlayVideo")
-                .html('<source id="overlayVideoSRC" src="index/RES/chrisVideo.mp4" type="video/mp4" />');
+                .attr("src", "index/RES/chrisVideo.mp4");
             startGame();
             break;
         case "maurin":
-            $("#overlayVideoSRC").empty();
-            $("#overlayVideo").html('<source id="overlayVideoSRC" src="index/RES/maurinVideo.mp4" type="video/mp4" />');
+            $("#overlayVideo")
+                .attr("src", "index/RES/maurinVideo.mp4");
             startGame();
             break;
         case "mathis":
-            $("#overlayVideoSRC").pause()
-                .attr("src", "index/RES/mathisVideo.mp4")
-                .play();
+            $("#overlayVideo")
+                .attr("src", "index/RES/mathisVideo.mp4");
             startGame();
             break;
         case "jesse":
-            $("#overlayVideoSRC").pause()
-                .attr("src", "index/RES/jesseVideo.mp4")
-                .play();
+            $("#overlayVideo")
+                .attr("src", "index/RES/jesseVideo.mp4");
             startGame();
             break;
         case "ahmet":
-            $("#overlayVideoSRC").pause()
-                .attr("src", "index/RES/ahmetVideo.mp4")
-                .play();
+            $("#overlayVideo")
+                .attr("src", "index/RES/ahmetVideo.mp4");
             startGame();
             break;
         case "aiko":
-            $("#overlayVideoSRC").pause()
-                .attr("src", "index/RES/aikoVideo.mp4")
-                .play();
+            $("#overlayVideo")
+                .attr("src", "index/RES/aikoVideo.mp4");
             startGame();
             break;
     }
