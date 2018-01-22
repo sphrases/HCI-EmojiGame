@@ -18,19 +18,18 @@ function videoError(e) {
 function scaleVideo() {
     var viewportWidth = $(window).width();
     var videoWidth = $("#videoElement").width();
-    var difference = (viewportWidth - videoWidth)/4;
+    var difference = (viewportWidth - videoWidth) / 4;
     console.log(viewportWidth);
     console.log(videoWidth);
 
     console.log(difference);
-    if(viewportWidth == videoWidth) {
+    if (viewportWidth == videoWidth) {
         difference = 0;
     }
 
 
-
     $("#videoElement").css("left", "0")
-        .css("margin-left", difference);
+        .css("margin-left", "0");
 }
 
 
@@ -60,27 +59,38 @@ function selectPartner(partner) {
 
     switch (partner) {
         case "chris":
-            $("#overlayVideoSRC").attr("src", "index/RES/chrisVideo.mp4");
+            $("#overlayVideoSRC").empty();
+            $("#overlayVideo")
+                .html('<source id="overlayVideoSRC" src="index/RES/chrisVideo.mp4" type="video/mp4" />');
             startGame();
             break;
         case "maurin":
-            $("#overlayVideoSRC").attr("src", "index/RES/maurinVideo.mp4");
+            $("#overlayVideoSRC").empty();
+            $("#overlayVideo").html('<source id="overlayVideoSRC" src="index/RES/maurinVideo.mp4" type="video/mp4" />');
             startGame();
             break;
         case "mathis":
-            $("#overlayVideoSRC").attr("src", "index/RES/mathisVideo.mp4");
+            $("#overlayVideoSRC").pause()
+                .attr("src", "index/RES/mathisVideo.mp4")
+                .play();
             startGame();
             break;
         case "jesse":
-            $("#overlayVideoSRC").attr("src", "index/RES/jesseVideo.mp4");
+            $("#overlayVideoSRC").pause()
+                .attr("src", "index/RES/jesseVideo.mp4")
+                .play();
             startGame();
             break;
         case "ahmet":
-            $("#overlayVideoSRC").attr("src", "index/RES/ahmetVideo.mp4");
+            $("#overlayVideoSRC").pause()
+                .attr("src", "index/RES/ahmetVideo.mp4")
+                .play();
             startGame();
             break;
         case "aiko":
-            $("#overlayVideoSRC").attr("src", "index/RES/aikoVideo.mp4");
+            $("#overlayVideoSRC").pause()
+                .attr("src", "index/RES/aikoVideo.mp4")
+                .play();
             startGame();
             break;
     }
