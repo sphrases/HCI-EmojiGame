@@ -23,7 +23,7 @@ function scaleVideo() {
     console.log(videoWidth);
 
     console.log(difference);
-    if(difference >= 0) {
+    if(difference >= -100) {
         difference = 0;
     }
 
