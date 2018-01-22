@@ -23,7 +23,7 @@ function scaleVideo() {
     console.log(videoWidth);
 
     console.log(difference);
-    if(difference >= -100) {
+    if(viewportWidth == videoWidth) {
         difference = 0;
     }
 
@@ -60,27 +60,27 @@ function selectPartner(partner) {
 
     switch (partner) {
         case "chris":
-            $("#overlayVideo").attr("src", "index/RES/chrisVideo.mp4");
+            $("#overlayVideoSRC").attr("src", "index/RES/chrisVideo.mp4");
             startGame();
             break;
         case "maurin":
-            $("#overlayVideo").attr("src", "index/RES/maurinVideo.mp4");
+            $("#overlayVideoSRC").attr("src", "index/RES/maurinVideo.mp4");
             startGame();
             break;
         case "mathis":
-            $("#overlayVideo").attr("src", "index/RES/mathisVideo.mp4");
+            $("#overlayVideoSRC").attr("src", "index/RES/mathisVideo.mp4");
             startGame();
             break;
         case "jesse":
-            $("#overlayVideo").attr("src", "index/RES/jesseVideo.mp4");
+            $("#overlayVideoSRC").attr("src", "index/RES/jesseVideo.mp4");
             startGame();
             break;
         case "ahmet":
-            $("#overlayVideo").attr("src", "index/RES/ahmetVideo.mp4");
+            $("#overlayVideoSRC").attr("src", "index/RES/ahmetVideo.mp4");
             startGame();
             break;
         case "aiko":
-            $("#overlayVideo").attr("src", "index/RES/aikoVideo.mp4");
+            $("#overlayVideoSRC").attr("src", "index/RES/aikoVideo.mp4");
             startGame();
             break;
     }
