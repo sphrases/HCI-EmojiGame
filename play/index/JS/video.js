@@ -58,57 +58,45 @@ function selectPartner(partner) {
     stopTimer();
     switch (partner) {
         case "chris":
-            var $newVideo = [ '' +
-                '<p class="containerVideo-connectText">partner connecting...</p>' +
-                '<video id="overlayVideo" autoplay muted loop>' +
-                    '<source id="overlayVideoSrc" type="video/mp4" src="index/RES/chrisVideo.mp4"/>' +
-                '</video>'
-            ];
-            $("#containerVideo").children().filter("video").each(function () {
-                this.pause(); // can't hurt
-                delete this; // @sparkey reports that this did the trick (even though it makes no sense!)
-                $(this).remove(); // this is probably what actually does the trick
-            });
-            $("#containerVideo").empty();
-            $("#containerVideo").append($newVideo);
+            changeVideo('chris');
             startGame();
             break;
         case "maurin":
-            var $newVideo = [ '' +
-            '<p class="containerVideo-connectText">partner connecting...</p>' +
-            '<video id="overlayVideo" autoplay muted loop>' +
-            '<source id="overlayVideoSrc" type="video/mp4" src="index/RES/maurinVideo.mp4"/>' +
-            '</video>'
-            ];
-            $("#containerVideo").children().filter("video").each(function () {
-                this.pause(); // can't hurt
-                delete this; // @sparkey reports that this did the trick (even though it makes no sense!)
-                $(this).remove(); // this is probably what actually does the trick
-            });
-            $("#containerVideo").empty();
-            $("#containerVideo").append($newVideo);
+            changeVideo('maurin');
             startGame();
             break;
         case "mathis":
-            $("#overlayVideo").attr("src", "index/RES/mathisVideo.mp4")
-                .load()
-                .play;
+            changeVideo('mathis');
             startGame();
             break;
         case "jesse":
-            $("#overlayVideoSrc")
-                .attr("src", "index/RES/jesseVideo.mp4");
+            changeVideo('jesse');
             startGame();
             break;
         case "ahmet":
-            $("#overlayVideo")
-                .attr("src", "index/RES/ahmetVideo.mp4");
+            changeVideo('ahmet');
             startGame();
             break;
         case "aiko":
-            $("#overlayVideoSrc")
-                .attr("src", "index/RES/aikoVideo.mp4");
+            changeVideo('aiko');
             startGame();
             break;
     }
+}
+
+
+function changeVideo(video) {
+    var $newVideo = ['' +
+    '<p class="containerVideo-connectText">partner connecting...</p>' +
+    '<video id="overlayVideo" autoplay muted loop>' +
+    '<source id="overlayVideoSrc" type="video/mp4" src="index/RES/' + video + 'Video.mp4"/>' +
+    '</video>'
+    ];
+    $("#containerVideo").children().filter("video").each(function () {
+        this.pause(); // can't hurt
+        delete this; // @sparkey reports that this did the trick (even though it makes no sense!)
+        $(this).remove(); // this is probably what actually does the trick
+    });
+    $("#containerVideo").empty();
+    $("#containerVideo").append($newVideo);
 }
