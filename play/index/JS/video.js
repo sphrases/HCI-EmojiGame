@@ -58,39 +58,56 @@ function selectPartner(partner) {
     stopTimer();
     switch (partner) {
         case "chris":
-            $("#overlayVideo").attr("src", "index/RES/chrisVideo.mp4")
-                .load()
-                .play();
+            var $newVideo = [ '' +
+                '<p class="containerVideo-connectText">partner connecting...</p>' +
+                '<video id="overlayVideo" autoplay muted loop>' +
+                    '<source id="overlayVideoSrc" type="video/mp4" src="index/RES/chrisVideo.mp4"/>' +
+                '</video>'
+            ];
+            $("#containerVideo").children().filter("video").each(function () {
+                this.pause(); // can't hurt
+                delete this; // @sparkey reports that this did the trick (even though it makes no sense!)
+                $(this).remove(); // this is probably what actually does the trick
+            });
+            $("#containerVideo").empty();
+            $("#containerVideo").append($newVideo);
             startGame();
             break;
         case "maurin":
-            $("#overlayVideo").attr("src", "index/RES/maurinVideo.mp4")
-                .load()
-                .play();
+            var $newVideo = [ '' +
+            '<p class="containerVideo-connectText">partner connecting...</p>' +
+            '<video id="overlayVideo" autoplay muted loop>' +
+            '<source id="overlayVideoSrc" type="video/mp4" src="index/RES/maurinVideo.mp4"/>' +
+            '</video>'
+            ];
+            $("#containerVideo").children().filter("video").each(function () {
+                this.pause(); // can't hurt
+                delete this; // @sparkey reports that this did the trick (even though it makes no sense!)
+                $(this).remove(); // this is probably what actually does the trick
+            });
+            $("#containerVideo").empty();
+            $("#containerVideo").append($newVideo);
             startGame();
             break;
         case "mathis":
             $("#overlayVideo").attr("src", "index/RES/mathisVideo.mp4")
                 .load()
-                .play();
+                .play;
             startGame();
             break;
         case "jesse":
-            $("#overlayVideo").attr("src", "index/RES/jesseVideo.mp4")
-                .load()
-                .play();
+            $("#overlayVideoSrc")
+                .attr("src", "index/RES/jesseVideo.mp4");
             startGame();
             break;
         case "ahmet":
-            $("#overlayVideo").attr("src", "index/RES/ahmetVideo.mp4")
-                .load()
-                .play();
+            $("#overlayVideo")
+                .attr("src", "index/RES/ahmetVideo.mp4");
             startGame();
             break;
         case "aiko":
-            $("#overlayVideo").attr("src", "index/RES/aikoVideo.mp4")
-                .load()
-                .play();
+            $("#overlayVideoSrc")
+                .attr("src", "index/RES/aikoVideo.mp4");
             startGame();
             break;
     }
