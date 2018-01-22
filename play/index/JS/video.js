@@ -60,37 +60,37 @@ function selectPartner(partner) {
         case "chris":
             $("#overlayVideo").attr("src", "index/RES/chrisVideo.mp4")
                 .load()
-                .play;
+                .play();
             startGame();
             break;
         case "maurin":
             $("#overlayVideo").attr("src", "index/RES/maurinVideo.mp4")
                 .load()
-                .play;
+                .play();
             startGame();
             break;
         case "mathis":
             $("#overlayVideo").attr("src", "index/RES/mathisVideo.mp4")
                 .load()
-                .play;
+                .play();
             startGame();
             break;
         case "jesse":
             $("#overlayVideo").attr("src", "index/RES/jesseVideo.mp4")
                 .load()
-                .play;
+                .play();
             startGame();
             break;
         case "ahmet":
             $("#overlayVideo").attr("src", "index/RES/ahmetVideo.mp4")
                 .load()
-                .play;
+                .play();
             startGame();
             break;
         case "aiko":
             $("#overlayVideo").attr("src", "index/RES/aikoVideo.mp4")
                 .load()
-                .play;
+                .play();
             startGame();
             break;
     }
