@@ -58,20 +58,18 @@ function selectPartner(partner) {
     stopTimer();
     switch (partner) {
         case "chris":
-            $("#overlayVideo")
-                .attr("src", "index/RES/chrisVideo.mp4")
-                .play();
+            $("#overlayVideo").attr("src", "index/RES/chrisVideo.mp4");
+            $("#overlayVideo").play;
             startGame();
             break;
         case "maurin":
-            $("#overlayVideo")
-                .attr("src", "index/RES/maurinVideo.mp4")
-                .play();
+            $("#overlayVideo").attr("src", "index/RES/maurinVideo.mp4");
+            $("#overlayVideo").play;
             startGame();
             break;
         case "mathis":
-            $("#overlayVideo")
-                .attr("src", "index/RES/mathisVideo.mp4");
+            $("#overlayVideo").attr("src", "index/RES/mathisVideo.mp4");
+            $("#overlayVideo").play;
             startGame();
             break;
         case "jesse":
