@@ -59,12 +59,14 @@ function selectPartner(partner) {
     switch (partner) {
         case "chris":
             $("#overlayVideo")
-                .attr("src", "index/RES/chrisVideo.mp4");
+                .attr("src", "index/RES/chrisVideo.mp4")
+                .play();
             startGame();
             break;
         case "maurin":
             $("#overlayVideo")
-                .attr("src", "index/RES/maurinVideo.mp4");
+                .attr("src", "index/RES/maurinVideo.mp4")
+                .play();
             startGame();
             break;
         case "mathis":
