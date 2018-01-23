@@ -3,6 +3,8 @@ var timerInterval;
 var winningDelayTimer;
 var currentEmoji = "Grimasse";
 
+
+
 function onLoadFunction() {
     //closeNav();
 }
@@ -107,6 +109,7 @@ function hidePlayerSelector() {
 }
 
 function startTimer() {
+    stopTimer();
     start = new Date;
     $(".actionBar-timer").css("color", "#ff2d1f");
     timerInterval = setInterval(function () {

@@ -257,14 +257,27 @@ drop-shadow(1 px 1 px 7 px rgba(0, 0, 0, 0.5));
 
 }
 
+.overlayPlayer {
+    z-index: 2;
+}
+
 .overlayPlayer img {
+    z-index: 4;
     height: 20vw;
     width: 20vw;
     display: inline-block;
     float: left;
 }
 
+.overlayEmoji h1{
+    display: block;
+    text-align: center;
+    margin-top: 4vw;
+    color: #ffbf17;
+}
+
 .playerSelectButton {
+    z-index: 4;
     border: 0.16em solid #ffbf17;
     border-radius: 1em;
     margin: 3vw;
@@ -280,6 +293,7 @@ drop-shadow(1 px 1 px 7 px rgba(0, 0, 0, 0.5));
 }
 
 .playerSelectButton span {
+    z-index: 4;
     line-height: 20vw;
     margin-left: 6vw;
     display: inline-block;

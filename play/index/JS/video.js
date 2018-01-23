@@ -1,5 +1,5 @@
 var video = document.querySelector("#videoElement");
-
+var currentPartner = "";
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
 
 if (navigator.getUserMedia) {
@@ -38,7 +38,14 @@ function connectPartner() {
         $("#overlayVideo").animate({opacity: 1});
         //document.getElementById("overlayVideo").play();
     }, 3000);
+}
 
+
+function reConnectPartner() {
+    console.log("recon");
+    if(currentPartner != "") {
+        $("#overlayVideo").animate({opacity: 1});
+    }
 }
 
 function disconnectPartner() {
@@ -52,26 +59,32 @@ function selectPartner(partner) {
     stopTimer();
     switch (partner) {
         case "chris":
+            currentPartner = "chris";
             changeVideo('chris');
             startGame();
             break;
         case "maurin":
+            currentPartner = "maurin";
             changeVideo('maurin');
             startGame();
             break;
         case "mathis":
+            currentPartner = "mathis";
             changeVideo('mathis');
             startGame();
             break;
         case "jesse":
+            currentPartner = "jesse";
             changeVideo('jesse');
             startGame();
             break;
         case "ahmet":
+            currentPartner = "ahmet";
             changeVideo('ahmet');
             startGame();
             break;
         case "aiko":
+            currentPartner = "aiko";
             changeVideo('aiko');
             startGame();
             break;
