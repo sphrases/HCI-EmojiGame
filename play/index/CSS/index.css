@@ -38,7 +38,7 @@ body {
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     color: #5fbd28;
-    text-shadow: 1px 1px 7px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
     font-size: 2em;
     margin-left: 5vw;
     margin-top: 4vw;
@@ -56,8 +56,8 @@ body {
     height: 18vw;
     margin-top: 10%;
     margin-right: 5%;
-    -webkit-filter: drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
-    drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(1px 1px 7px rgba(0, 0, 0, 0.5));
+drop-shadow(1 px 1 px 7 px rgba(0, 0, 0, 0.5));
 }
 
 /* emojiBar */
@@ -69,13 +69,14 @@ body {
     width: 45vw;
     height: 45vw;
 
-    -webkit-filter: drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
-    drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(1px 1px 7px rgba(0, 0, 0, 0.5));
+drop-shadow(1 px 1 px 7 px rgba(0, 0, 0, 0.5));
 
 }
 
 /* navBarToggle */
 .navBar-toggle {
+    opacity: 0;
     z-index: 100;
     position: fixed;
     display: block;
@@ -84,6 +85,7 @@ body {
     outline: 0;
     border: none;
     background-color: transparent;
+    color: #ffbf17;
     font-weight: bold;
     font-size: 10vw;
     transition: 0.5s;
@@ -104,11 +106,23 @@ body {
     /*background: linear-gradient(to right, rgba(192, 77, 249, 0.3), rgba(255, 0, 0, 0));*/
 }
 
+.navBar img {
+    z-index: -10;
+    position: absolute;
+    top: -15vw;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
 .navBar-title {
+    z-index: 1;
     font-weight: bold;
     font-size: 12vw;
     background-color: transparent;
-    padding: 2vw;
+    color: #000;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
     text-align: center;
 }
 
@@ -119,9 +133,9 @@ body {
 
 .navBar-button {
     font-weight: bold;
-    font-size: 7vw;
+    font-size: 9vw;
     background-color: transparent;
-    padding: 2vw 10vw;
+    padding: 3vw 4vw;
     text-align: left;
     border: none;
     transition: 0.3s;
@@ -136,6 +150,16 @@ body {
 .navBar-button:focus {
     text-decoration: none;
     outline: none;
+}
+
+.navBar-Copyright {
+    position: absolute;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    bottom: 0;
+    padding: 3vw;
+    color: #9b740f;
+
 }
 
 .navBar-hideBar {
@@ -167,9 +191,7 @@ body {
     cursor: pointer; /* Add a pointer on hover */
 }
 
-
-
-.overlay img {
+.overlayEmoji img {
     height: 30vw;
     width: 30vw;
 }
@@ -201,7 +223,6 @@ body {
 
 }
 
-
 /* Chat Video */
 #containerVideo {
     width: 50%;
@@ -216,12 +237,12 @@ body {
     width: 60%;
     height: auto;
     margin-top: -28%;
-    margin-left : 27%;
+    margin-left: 27%;
     margin-bottom: 20%;
     border: 2px solid #ffbf17;
     border-radius: 50%;
-    -webkit-filter: drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
-    drop-shadow(1px 1px 7px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(1px 1px 7px rgba(0, 0, 0, 0.5));
+drop-shadow(1 px 1 px 7 px rgba(0, 0, 0, 0.5));
 }
 
 .containerVideo-connectText {
@@ -230,13 +251,41 @@ body {
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     color: #ffbf17;
-    text-shadow: 1px 1px 7px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
     font-size: 1.3em;
     margin-left: 20%;
 
 }
 
-.overlayPlayer {
+.overlayPlayer img {
+    height: 20vw;
+    width: 20vw;
+    display: inline-block;
+    float: left;
+}
 
+.playerSelectButton {
+    border: 0.16em solid #ffbf17;
+    border-radius: 1em;
+    margin: 3vw;
+    padding: 2vw;
+}
+
+.playerSelectButton:hover {
+    border-color: #000bff;
+}
+
+.playerSelectButton:active {
+    border-color: #000bff;
+}
+
+.playerSelectButton span {
+    line-height: 20vw;
+    margin-left: 6vw;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 2em;
+    color: #ffbf17;
 
 }

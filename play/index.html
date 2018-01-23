@@ -8,7 +8,7 @@
     <title>DesktopLayout</title>
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./index/JS/lib/jquery-3.3.1.min.js"></script>
     <script src="./index/JS/index.js"></script>
 
     <!-- CSS -->
@@ -31,11 +31,26 @@
 
 <div class="overlay overlayPlayer" onclick="hidePlayerSelector()">
     <p>Select Partner:</p>
-    <img src="index/RES/chrisPicture.png" onclick="selectPartner('chris');"/>
-    <img src="index/RES/maurinPicture.png" onclick="selectPartner('maurin');"/>
-    <img src="index/RES/mathisPicture.png" onclick="selectPartner('mathis');"/>
-    <img src="index/RES/jessePicture.png" onclick="selectPartner('jesse');"/>
-    <img src="index/RES/aikoPicture.png" onclick="selectPartner('aiko');"/>
+    <div class="playerSelectButton" onclick="selectPartner('chris');">
+        <img src="index/RES/chrisPicture.png" />
+        <span>Chris</span>
+    </div>
+    <div class="playerSelectButton" onclick="selectPartner('maurin');">
+        <img src="index/RES/maurinPicture.png" />
+        <span>Maurin</span>
+    </div>
+    <div class="playerSelectButton" onclick="selectPartner('mathis');">
+        <img src="index/RES/mathisPicture.png"/>
+        <span>Mathis</span>
+    </div>
+    <div class="playerSelectButton" onclick="selectPartner('jesse');">
+        <img src="index/RES/jessePicture.png"/>
+        <span>Jesse</span>
+    </div>
+    <div class="playerSelectButton" onclick="selectPartner('aiko');">
+        <img src="index/RES/aikoPicture.png"/>
+        <span>Aiko</span>
+    </div>
 </div>
 
 <!-- Partner Video Container-->
@@ -51,7 +66,6 @@
     <video autoplay="autoplay" id="videoElement" muted playsinline>
     </video>
 </div>
-
 
 
 <!-- Action Bar: With Emoji, and Selector -->
@@ -72,12 +86,13 @@
 <!-- Nav Bar: Side Menu -->
 <button class="navBar-toggle" id="navBar-toggle" onclick="toggleNav()">&#9776;</button>
 <div class="navBar" id="navBar">
+    <img src="./index/RES/wallpaper.jpg">
     <h1 class="navBar-post navBar-title">Emojify</h1>
-    <button class="navBar-post navBar-button" onclick="showPlayerSelector();toggleNav();disconnectPartner()">New Game
+    <button class="navBar-post navBar-button" onclick="toggleNav();showPlayerSelector();disconnectPartner()">New Game
     </button>
     <button class="navBar-post navBar-button">Profile</button>
-    <button class="navBar-post navBar-button">Setting</button>
-    <button class="navBar-post navBar-button">Dixhuxen</button>
+    <button class="navBar-post navBar-button">Settings</button>
+    <p class="navBar-Copyright">&#9400; EmojiFy Ltd. 2018</p>
 </div>
 <div class="navBar-hideBar" id="navBar-hideBar" onclick="toggleNav()"></div>
 

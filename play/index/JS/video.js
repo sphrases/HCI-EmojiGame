@@ -19,15 +19,9 @@ function scaleVideo() {
     var viewportWidth = $(window).width();
     var videoWidth = $("#videoElement").width();
     var difference = (viewportWidth - videoWidth) / 4;
-    console.log(viewportWidth);
-    console.log(videoWidth);
-
-    console.log(difference);
     if (viewportWidth == videoWidth) {
         difference = 0;
     }
-
-
     $("#videoElement").css("left", "0")
         .css("margin-left", "0");
 }
