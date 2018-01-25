@@ -1,3 +1,11 @@
+/**
+ * JS for managing the video playback as well as webcam access.
+ *
+ * @link   /index/JS/video.js
+ * @author ABenjamins
+ * @author CFelder
+ * @since  10.01.2018
+ */
 var video = document.querySelector("#videoElement");
 var currentPartner = "";
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
@@ -42,8 +50,7 @@ function connectPartner() {
 
 
 function reConnectPartner() {
-    console.log("recon");
-    if(currentPartner != "") {
+    if (currentPartner != "") {
         $("#overlayVideo").animate({opacity: 1});
     }
 }
@@ -93,17 +100,17 @@ function selectPartner(partner) {
 
 
 function changeVideo(video) {
-    var $newVideo = ['' +
+    var newVideo = ['' +
     '<p class="containerVideo-connectText">partner connecting...</p>' +
     '<video id="overlayVideo" autoplay muted loop>' +
     '<source id="overlayVideoSrc" type="video/mp4" src="index/RES/' + video + 'Video.mp4"/>' +
     '</video>'
     ];
     $("#containerVideo").children().filter("video").each(function () {
-        this.pause(); // can't hurt
-        delete this; // @sparkey reports that this did the trick (even though it makes no sense!)
-        $(this).remove(); // this is probably what actually does the trick
-    });
-    $("#containerVideo").empty();
-    $("#containerVideo").append($newVideo);
+        this.pause();
+        delete this;
+        $(this).remove();
+    })
+        .empty()
+        .append(newVideo);
 }

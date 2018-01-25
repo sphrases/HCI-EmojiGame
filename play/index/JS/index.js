@@ -1,3 +1,11 @@
+/**
+ * Every JS that has nothing to do with video stuff.
+ *
+ * @link   /index/JS/index.js
+ * @author ABenjamins
+ * @author CFelder
+ * @since  10.01.2018
+ */
 var start;
 var timerInterval;
 var winningDelayTimer;
