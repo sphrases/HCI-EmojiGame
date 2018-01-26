@@ -1,7 +1,6 @@
 /**
  * JS for managing the video playback as well as webcam access.
  *
- * @link   /index/JS/video.js
  * @author ABenjamins
  * @author CFelder
  * @since  10.01.2018
@@ -110,7 +109,7 @@ function changeVideo(video) {
         this.pause();
         delete this;
         $(this).remove();
-    })
-        .empty()
+    });
+    $("#containerVideo").empty()
         .append(newVideo);
 }
